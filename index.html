@@ -385,7 +385,7 @@
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
-    const vcf = ['BEGIN:VCARD', 'VERSION:3.0', 'FN:', 'N:;Mr SofaBy Ramesh Master Ji;;;', 'ORG:Mr.Sofa', 'TITLE:Business Manager', 'TEL;TYPE=CELL:+919266605003', 'EMAIL:mrsofaamit@gmail.com', 'URL:https://www.mrsofa.in', 'ADR;TYPE=WORK:;;;Delhi;;;India', 'END:VCARD'].join('\r\n');
+    const vcf = ['BEGIN:VCARD', 'VERSION:3.0', 'FN:', 'N:;Mr Sofa By Ramesh Master Ji;;;', 'ORG:Mr.Sofa', 'TITLE:Business Manager', 'TEL;TYPE=CELL:+919266605003', 'EMAIL:mrsofaamit@gmail.com', 'URL:https://www.mrsofa.in', 'ADR;TYPE=WORK:;;;Delhi;;;India', 'END:VCARD'].join('\r\n');
     function downloadContact() { const a = document.createElement('a'); const url = URL.createObjectURL(new Blob([vcf], { type: 'text/vcard;charset=utf-8' })); a.href = url; a.download = 'Ramesh-Ji-MrSofa.vcf'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000) }
     document.getElementById('save').addEventListener('click', downloadContact);
     if (window.QRCode) { new QRCode(document.getElementById('qr'), { text: vcf, width: 80, height: 80, colorDark: '#332119', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.L }) }
